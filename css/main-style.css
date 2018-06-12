@@ -19,12 +19,25 @@ body {
     color: #f8f8f8;
     background: url(../img/editorial.jpg) no-repeat center center;
     background-size: cover;
+    background-position: center;
 }
 .container {
   /*margin:0 auto;
   width: 80%;*/
   font-size: 0;
   text-align: center;
+}
+nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  background-color: black;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-family: 'Fjalla One', sans-serif;;
+  text-decoration: none;
+  z-index: 40;
 }
 .caja {
   display: inline-block;
@@ -40,16 +53,30 @@ body {
 h1 {
   font-family: 'Fjalla One', sans-serif;
   text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-  font-size: 3.5rem;
-  padding: 1.8rem;
+  font-size: 3rem;
+  padding: 3.5rem 0 .5rem 1.6rem;
   text-align: left;
 }
 h2 {
-  font-family: 'Fjalla One', cursive;
+  font-size: 2rem;
+  font-family: 'Fjalla One', sans-serif;
+  padding: 0.8rem;
+  padding-left: 1.2rem;
+}
+h3 {
+  font-family: 'Fjalla One', sans-serif;
   padding: 0.8rem;
 }
 .parrafo p {
-  font: normal 300 1rem/1.8 'Ubuntu', sans-serif;
+  font: normal 300 0.8rem/1.8 'Ubuntu', sans-serif;
+}
+.caja dd, .caja ul {
+  font: normal 300 0.8rem/1.8 'Ubuntu', sans-serif;
+  padding: 0 0.8rem;
+}
+.caja dt {
+  font: normal 700 0.8rem/1.8 'Ubuntu', sans-serif;
+  padding: 0 0.8rem;
 }
 p.inicial {
   margin-bottom: 0;
@@ -78,4 +105,146 @@ p + p.indent {
     width: 95%;
     border-top: 1px solid #f8f8f8;
     border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+
+.Background-container {
+  background: linear-gradient(230.0deg, rgb(18, 76, 89) 28.23%, #4EA64B 63.45%);
+  width: 100%;
+    height: 60%;
+    position: absolute;
+    z-index: -1;
+    transform: skewY(-12deg);
+    transform-origin: 0;
+}
+.Background-container span:nth-child(1) {
+    background-color: #F8A800;
+    width: 45%;
+    left: -10%;
+    top: 10%;
+    height: 190px;
+    position: absolute;
+}
+.Background-container span:nth-child(2) {
+    background: linear-gradient(230.0deg, rgb(181, 74, 53) 80.23%, #F8CA4D 63.45%);
+    width: 33.33333%;
+    left: -16.66666%;
+    top: 0;
+    height: 190px;
+    position: absolute;
+}
+.aboutme {
+  width: 15%;
+  padding: .8rem;
+}
+h4 {
+  padding-left: 0.8rem;
+  font-family: 'Fjalla One', sans-serif;
+}
+label {
+  font-weight: normal;
+}
+
+/* acordeon */
+
+.ac-container{
+	width: 100%;
+	margin: 10px auto 30px auto;
+}
+.ac-container label{
+	font-family: 'Fjalla One', cursive;
+	padding: 1px 20px;
+	position: relative;
+	z-index: 20;
+	display: block;
+	height: 30px;
+	cursor: pointer;
+	color: #fff;
+	/*text-shadow: 1px 1px 1px rgba(255,255,255,0.8);*/
+	line-height: 33px;
+	font-size: 19px;
+	/*background: linear-gradient(top, #ffffff 1%,#eaeaea 100%);
+	box-shadow:
+		0px 0px 0px 1px rgba(155,155,155,0.3),
+		1px 0px 0px 0px rgba(255,255,255,0.9) inset,
+		0px 2px 2px rgba(0,0,0,0.1);*/
+}
+.ac-container label:hover{
+	background: #fff;
+  color: #000;
+}
+.ac-container input:checked + label,
+.ac-container input:checked + label:hover{
+	background: #000;
+	color: #fff;
+	/*text-shadow: 0px 1px 1px rgba(255,255,255, 0.6);
+	box-shadow:
+		0px 0px 0px 1px rgba(155,155,155,0.3),
+		0px 2px 2px rgba(0,0,0,0.1);*/
+}
+.ac-container label:hover:after,
+.ac-container input:checked + label:hover:after{
+	content: '';
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	right: 13px;
+	top: 2px;
+	background: transparent url(../img/down.svg) no-repeat center center;
+}
+.ac-container input:checked + label:hover:after{
+	background-image: url(../img/up.svg);
+}
+.ac-container input{
+	display: none;
+}
+.ac-container article{
+	background: #000 0.5;
+	margin-top: -1px;
+	overflow: hidden;
+	height: 0px;
+	position: relative;
+	z-index: 10;
+  -webkit-transition:
+  height 0.3s ease-in-out,
+  box-shadow 0.6s linear;
+	transition:
+		height 0.3s ease-in-out,
+		box-shadow 0.6s linear;
+    padding-left: .5rem;
+}
+.ac-container input:checked ~ article{
+  -webkit-transition:
+  height 0.5s ease-in-out,
+  box-shadow 0.1s linear;
+	transition:
+		height 0.5s ease-in-out,
+		box-shadow 0.1s linear;
+	box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
+}
+.ac-container article p{
+	font-style: italic;
+	color: #777;
+	line-height: 23px;
+	font-size: 14px;
+	padding: 20px;
+	/*text-shadow: 1px 1px 1px rgba(255,255,255,0.8);*/
+}
+.ac-container input:checked ~ article.ac-small{
+	height: 140px;
+}
+.ac-container input:checked ~ article.ac-medium{
+	height: 180px;
+}
+.ac-container input:checked ~ article.ac-large{
+	height: 250px;
+}
+.ac-container input:checked ~ article.ac-otrosCursos{
+	height: 350px;
+}
+.ac-container input:checked ~ article.ac-asistidos{
+	height: 1120px;
+}
+.ac-container input:checked ~ article.ac-trabajo{
+	height: 1250px;
 }

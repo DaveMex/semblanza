@@ -33,7 +33,7 @@ h6 {
 .intro-header {
     width: 100%;
     height: 100%;
-    text-align: center;
+    text-align: left;
     color: #f8f8f8;
     background: url(../img/editorial.jpg) no-repeat center center;
     background-size: cover;
@@ -41,15 +41,18 @@ h6 {
 
 .intro-message {
     position: relative;
-    padding-top: 20%;
-    padding-bottom: 20%;
+    /*padding-top: 5%;
+    padding-bottom: 20%;*/
+    background-color: rgba(0,0,0,0.7);
+    padding: 0.8rem;
 }
 
-.intro-message > h1 {
+#hdrDescription {
     margin: 0;
     font-family: 'Abril Fatface', cursive;
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-    font-size: 5em;
+    font-size: 4.5rem;
+    padding: 0.4rem;
 }
 
 .intro-divider {
@@ -68,7 +71,7 @@ h6 {
     }
 
     .intro-message > h1 {
-        font-size: 3em;
+        font-size: 3rem;
     }
 
     ul.intro-social-buttons > li {
@@ -124,7 +127,7 @@ h6 {
 .banner h2 {
     margin: 0;
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-    font-size: 3em;
+    font-size: 3rem;
 }
 
 .banner ul {
@@ -147,7 +150,7 @@ h6 {
     .banner h2 {
         margin: 0;
         text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-        font-size: 3em;
+        font-size: 3rem;
     }
 
     ul.banner-social-buttons > li {
